@@ -1,0 +1,10 @@
+{
+  "appServicePlan": "asp",
+  "appService": "app",
+  "applicationInsights": "appi",
+  "keyVault": "kv",
+  "logAnalyticsWorkspace": "log",
+  "resourceGroup": "rg",
+  "sqlServer": "sql",
+  "sqlDatabase": "sqldb"
+}

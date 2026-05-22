@@ -1,0 +1,11 @@
+name: tdd-azd-appservice-sql-webapp
+metadata:
+  template: tddazd-appservice-sql-webapp@1.0.0
+infra:
+  provider: bicep
+  path: ./infra
+services:
+  web:
+    project: ./src/AppServiceSqlWebapp.Web
+    host: appservice
+    language: csharp

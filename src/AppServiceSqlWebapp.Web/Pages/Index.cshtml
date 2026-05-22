@@ -1,0 +1,99 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Logistics Dashboard</h1>
+<p class="lead">Shipment and fleet management overview</p>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">Total Shipments</h5>
+                <p class="card-text display-6">@Model.TotalShipments</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Active Warehouses</h5>
+                <p class="card-text display-6">@Model.TotalWarehouses</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Drivers</h5>
+                <p class="card-text display-6">@Model.TotalDrivers</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Shipment Status Breakdown</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var status in Model.ShipmentsByStatus)
+                {
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>@status.Key</span>
+                        <span class="badge bg-secondary">@status.Value</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Driver Availability</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var status in Model.DriversByStatus)
+                {
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>@status.Key</span>
+                        <span class="badge bg-secondary">@status.Value</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">Recent Shipments</div>
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>Tracking #</th>
+                            <th>Origin</th>
+                            <th>Destination</th>
+                            <th>Status</th>
+                            <th>Ship Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var s in Model.RecentShipments)
+                        {
+                            <tr>
+                                <td>@s.TrackingNumber</td>
+                                <td>@s.Origin</td>
+                                <td>@s.Destination</td>
+                                <td><span class="badge bg-@(s.Status == "Delivered" ? "success" : s.Status == "In Transit" ? "warning" : "secondary")">@s.Status</span></td>
+                                <td>@s.ShipDate.ToString("yyyy-MM-dd")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

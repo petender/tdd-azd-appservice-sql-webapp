@@ -1,0 +1,45 @@
+@page
+@model AppServiceSqlWebapp.Web.Pages.Drivers.CreateModel
+@{
+    ViewData["Title"] = "New Driver";
+}
+
+<h1>Create Driver</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="Driver.FullName" class="form-label"></label>
+                <input asp-for="Driver.FullName" class="form-control" />
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Driver.LicenseNumber" class="form-label"></label>
+                    <input asp-for="Driver.LicenseNumber" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Driver.PhoneNumber" class="form-label"></label>
+                    <input asp-for="Driver.PhoneNumber" class="form-control" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Driver.Status" class="form-label"></label>
+                    <select asp-for="Driver.Status" class="form-select">
+                        <option>Available</option>
+                        <option>On Route</option>
+                        <option>Off Duty</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Driver.AssignedVehicle" class="form-label"></label>
+                    <input asp-for="Driver.AssignedVehicle" class="form-control" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-page="Index" class="btn btn-outline-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

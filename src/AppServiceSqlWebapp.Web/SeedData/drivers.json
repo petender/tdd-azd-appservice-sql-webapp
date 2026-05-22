@@ -1,0 +1,14 @@
+[
+  { "Id": 1, "FullName": "Marcus Rivera", "LicenseNumber": "DL-2024-0001", "PhoneNumber": "555-0101", "Status": "Available", "AssignedVehicle": "Truck-A1" },
+  { "Id": 2, "FullName": "Sarah Chen", "LicenseNumber": "DL-2024-0002", "PhoneNumber": "555-0102", "Status": "On Route", "AssignedVehicle": "Truck-B3" },
+  { "Id": 3, "FullName": "James Okafor", "LicenseNumber": "DL-2024-0003", "PhoneNumber": "555-0103", "Status": "Available", "AssignedVehicle": "Van-C2" },
+  { "Id": 4, "FullName": "Emily Watson", "LicenseNumber": "DL-2024-0004", "PhoneNumber": "555-0104", "Status": "On Route", "AssignedVehicle": "Truck-A4" },
+  { "Id": 5, "FullName": "Carlos Mendez", "LicenseNumber": "DL-2024-0005", "PhoneNumber": "555-0105", "Status": "Off Duty", "AssignedVehicle": "Truck-B1" },
+  { "Id": 6, "FullName": "Aisha Patel", "LicenseNumber": "DL-2024-0006", "PhoneNumber": "555-0106", "Status": "Available", "AssignedVehicle": "Van-D1" },
+  { "Id": 7, "FullName": "Robert Kim", "LicenseNumber": "DL-2024-0007", "PhoneNumber": "555-0107", "Status": "On Route", "AssignedVehicle": "Truck-C3" },
+  { "Id": 8, "FullName": "Nina Johansson", "LicenseNumber": "DL-2024-0008", "PhoneNumber": "555-0108", "Status": "Available", "AssignedVehicle": "Van-A2" },
+  { "Id": 9, "FullName": "David Thompson", "LicenseNumber": "DL-2024-0009", "PhoneNumber": "555-0109", "Status": "Off Duty", "AssignedVehicle": "Truck-D2" },
+  { "Id": 10, "FullName": "Fatima Al-Hassan", "LicenseNumber": "DL-2024-0010", "PhoneNumber": "555-0110", "Status": "Available", "AssignedVehicle": "Truck-B4" },
+  { "Id": 11, "FullName": "Lucas Fernandez", "LicenseNumber": "DL-2024-0011", "PhoneNumber": "555-0111", "Status": "On Route", "AssignedVehicle": "Van-B2" },
+  { "Id": 12, "FullName": "Grace Nakamura", "LicenseNumber": "DL-2024-0012", "PhoneNumber": "555-0112", "Status": "Available", "AssignedVehicle": "Truck-A3" }
+]

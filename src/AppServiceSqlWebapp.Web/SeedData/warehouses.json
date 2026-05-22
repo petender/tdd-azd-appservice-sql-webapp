@@ -1,0 +1,12 @@
+[
+  { "Id": 1, "Name": "East Coast Hub", "Location": "Newark, NJ", "Capacity": 5000, "CurrentOccupancy": 3200, "ManagerName": "Patricia Hayes" },
+  { "Id": 2, "Name": "Midwest Distribution Center", "Location": "Chicago, IL", "Capacity": 8000, "CurrentOccupancy": 5400, "ManagerName": "Thomas Grant" },
+  { "Id": 3, "Name": "Southern Logistics Park", "Location": "Atlanta, GA", "Capacity": 6000, "CurrentOccupancy": 4100, "ManagerName": "Angela Morris" },
+  { "Id": 4, "Name": "West Coast Terminal", "Location": "Los Angeles, CA", "Capacity": 10000, "CurrentOccupancy": 7800, "ManagerName": "Michael Chen" },
+  { "Id": 5, "Name": "Pacific Northwest Depot", "Location": "Seattle, WA", "Capacity": 4000, "CurrentOccupancy": 2900, "ManagerName": "Jennifer Olsen" },
+  { "Id": 6, "Name": "Southwest Fulfillment Center", "Location": "Dallas, TX", "Capacity": 7000, "CurrentOccupancy": 4600, "ManagerName": "Roberto Garza" },
+  { "Id": 7, "Name": "Mountain Region Warehouse", "Location": "Denver, CO", "Capacity": 3500, "CurrentOccupancy": 2100, "ManagerName": "Karen Mitchell" },
+  { "Id": 8, "Name": "Great Lakes Storage", "Location": "Detroit, MI", "Capacity": 4500, "CurrentOccupancy": 3000, "ManagerName": "Frank Sullivan" },
+  { "Id": 9, "Name": "Southeast Express Hub", "Location": "Miami, FL", "Capacity": 5500, "CurrentOccupancy": 4200, "ManagerName": "Diana Cruz" },
+  { "Id": 10, "Name": "Northeast Micro-Hub", "Location": "Boston, MA", "Capacity": 2500, "CurrentOccupancy": 1800, "ManagerName": "William Park" }
+]
