@@ -9,7 +9,7 @@ param location string = 'eastus2'
 
 @description('Environment name used in resource naming (e.g., demo, dev)')
 @minLength(1)
-@maxLength(10)
+@maxLength(20)
 param environment string
 
 @description('Project name for tagging')
@@ -123,6 +123,7 @@ resource kv 'Microsoft.KeyVault/vaults@2023-07-01' existing = {
 resource appServiceKvSecretsUser 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   name: guid(kv.id, appServiceName, keyVaultSecretsUserRoleId)
   scope: kv
+  dependsOn: [keyVault, appService]
   properties: {
     roleDefinitionId: subscriptionResourceId(
       'Microsoft.Authorization/roleDefinitions',
@@ -140,6 +141,7 @@ resource appServiceKvSecretsUser 'Microsoft.Authorization/roleAssignments@2022-0
 resource deployerKvAdmin 'Microsoft.Authorization/roleAssignments@2022-04-01' = if (!empty(principalId)) {
   name: guid(kv.id, principalId, keyVaultAdminRoleId)
   scope: kv
+  dependsOn: [keyVault]
   properties: {
     roleDefinitionId: subscriptionResourceId(
       'Microsoft.Authorization/roleDefinitions',

@@ -50,6 +50,7 @@ module sqlServer 'br/public:avm/res/sql/server:0.10.0' = {
         }
         maxSizeBytes: 2147483648
         collation: 'SQL_Latin1_General_CP1_CI_AS'
+        zoneRedundant: false
       }
     ]
     firewallRules: [
